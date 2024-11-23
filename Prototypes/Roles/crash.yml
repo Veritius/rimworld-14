@@ -1,6 +1,6 @@
 - type: entity
-  parent: BaseEventRoleSpawn
-  id: EventRoleSpawnCrashedBase
+  parent: MarkerBase
+  id: RimworldCrashSurvivorSpawnBase
   abstract: true
   suffix: Survivor
   components:
@@ -16,7 +16,7 @@
 
 - type: entity
   parent: MobHuman
-  id: EventRoleHumanCrashedCaptain
+  id: RimworldCrashSurvivorCaptain
   categories: [ HideSpawnMenu ]
   components:
   - type: RandomHumanoidAppearance
@@ -25,9 +25,9 @@
     roleLoadout: [ JobCaptain ]
 
 - type: entity
-  parent: EventRoleSpawnCrashedBase
-  id: EventRoleSpawnCrashedCaptain
-  name: captain
+  parent: RimworldCrashSurvivorSpawnBase
+  id: RimworldCrashSurvivorSpawnCaptain
+  name: crashed captain
   components:
   - type: Sprite
     layers:
@@ -40,7 +40,7 @@
 
 - type: entity
   parent: MobHuman
-  id: EventRoleHumanCrashedEngineer
+  id: RimworldCrashSurvivorEngineer
   categories: [ HideSpawnMenu ]
   components:
   - type: RandomHumanoidAppearance
@@ -49,9 +49,9 @@
     roleLoadout: [ JobStationEngineer ]
 
 - type: entity
-  parent: EventRoleSpawnCrashedBase
-  id: EventRoleSpawnCrashedEngineer
-  name: engineer
+  parent: RimworldCrashSurvivorSpawnBase
+  id: RimworldCrashSurvivorEngineer
+  name: crashed engineer
   components:
   - type: Sprite
     layers:
@@ -60,11 +60,11 @@
     - sprite: Markers/jobs.rsi
       state: engineer
   - type: GhostRoleMobSpawner
-    prototype: EventRoleHumanCrashedEngineer
+    prototype: RimworldCrashSurvivorEngineer
 
 - type: entity
   parent: MobHuman
-  id: EventRoleHumanCrashedDoctor
+  id: RimworldCrashSurvivorDoctor
   categories: [ HideSpawnMenu ]
   components:
   - type: RandomHumanoidAppearance
@@ -73,9 +73,9 @@
     roleLoadout: [ JobMedicalDoctor ]
 
 - type: entity
-  parent: EventRoleSpawnCrashedBase
+  parent: RimworldCrashSurvivorSpawnBase
   id: EventRoleSpawnCrashedDoctor
-  name: doctor
+  name: crashed doctor
   components:
   - type: Sprite
     layers:
@@ -84,4 +84,4 @@
     - sprite: Markers/jobs.rsi
       state: doctor
   - type: GhostRoleMobSpawner
-    prototype: EventRoleHumanCrashedDoctor
+    prototype: RimworldCrashSurvivorDoctor

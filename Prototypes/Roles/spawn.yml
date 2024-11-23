@@ -1,4 +1,0 @@
-- type: entity
-  abstract: true
-  parent: MarkerBase
-  id: BaseEventRoleSpawn
