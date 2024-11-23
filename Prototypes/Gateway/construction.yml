@@ -1,0 +1,161 @@
+- type: construction
+  id: WormholeGenerator
+  name: wormhole generator
+  description: Your ticket out of here.
+  graph: WormholeGenerator
+  startNode: start
+  targetNode: finish
+  category: Objective
+  icon:
+    sprite: Structures/Machines/gateway.rsi
+    state: frame
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: WormholeGenerator
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: frame
+      steps:
+      - material: Steel
+        amount: 20
+        doAfter: 7
+      - material: Plastic
+        amount: 8
+        doAfter: 3
+
+  - node: frame
+    entity: EventGatewayFrame
+    edges:
+    - to: wired
+      steps:
+      - material: Cable
+        amount: 6
+        doAfter: 4
+      - tool: Screwing
+        doAfter: 2
+
+  - node: wired
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: parts
+      steps:
+      - tag: CapacitorStockPart
+        name: capacitor
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 0.5
+      - tag: CapacitorStockPart
+        name: capacitor
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 0.5
+      - tool: Screwing
+        doAfter: 2
+
+  - node: parts
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: shell
+      steps:
+      - tag: WormholeGenPartProcessor
+        name: quantum processor
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: cpu_super
+        doAfter: 3
+      - material: Cable
+        amount: 1
+        doAfter: 0.7
+      - tool: Screwing
+        doAfter: 2
+      - tag: WormholeGenPartTransport
+        name: calabi-yau wormhole core
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: bluespacearray
+        doAfter: 3
+      - material: Cable
+        amount: 2
+        doAfter: 1.5
+      - tool: Screwing
+        doAfter: 0.9
+      - tag: WormholeGenPartPowerCell
+        name: zero-point energy cell
+        icon:
+          sprite: Objects/Power/power_cages.rsi
+          state: high
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2
+
+  - node: shell
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: disk
+      steps:
+      - material: Steel
+        amount: 8
+        doAfter: 2.5
+      - tool: Anchoring
+        doAfter: 3
+      - tool: Welding
+        doAfter: 4
+
+  - node: disk
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: finish
+      steps:
+      - tag: WormholeGenPartMapData
+        name: subspace map data
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: holodisk
+      completed:
+      - !type:SpawnPrototype
+        prototype: EventGateway
+      - !type:DeleteEntity
+
+  - node: finish
+
+- type: entity
+  parent: EventGatewayStructure
+  id: EventGatewayFrame
+  name: wormhole generator frame
+  description: Your ticket out of here. Eventually.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: WormholeGenerator
+    node: frame
+  - type: Sprite
+    sprite: Structures/Machines/gateway.rsi
+    noRot: true
+    layers:
+    - state: frame
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: frame }
+          wired: { state: frame }
+          parts: { state: frame }
+          shell: { state: frame }

@@ -1,0 +1,46 @@
+- type: entity
+  parent: PinpointerBase
+  id: MacguffinPinpointer
+  name: component pinpointer
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: pinpointer-crew
+      map: ["enum.PinpointerLayers.Base"]
+
+- type: entity
+  parent: MacguffinPinpointer
+  id: MacguffinPinpointerProcessor
+  description: A pinpointer tuned to a component necessary to escape the planet. This one points to an advanced computer.
+  suffix: Processor
+  components:
+  - type: Pinpointer
+    targetName: quantum processor
+
+- type: entity
+  parent: MacguffinPinpointer
+  id: MacguffinPinpointerTransport
+  description: A pinpointer tuned to a component necessary to escape the planet. This one points to an FTL-capable device.
+  suffix: Transport
+  components:
+  - type: Pinpointer
+    targetName: calabi-yau wormhole core
+
+- type: entity
+  parent: MacguffinPinpointer
+  id: MacguffinPinpointerPower
+  description: A pinpointer tuned to a component necessary to escape the planet. This one points to a sufficient energy source.
+  suffix: Power Cell
+  components:
+  - type: Pinpointer
+    targetName: zero-point energy cell
+
+- type: entity
+  parent: MacguffinPinpointer
+  id: MacguffinPinpointerMapData
+  description: A pinpointer tuned to a component necessary to escape the planet. This one points to a map of subspace.
+  suffix: Map Data
+  components:
+  - type: Pinpointer
+    targetName: subspace map data

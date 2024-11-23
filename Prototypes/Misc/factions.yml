@@ -1,0 +1,123 @@
+- type: npcFaction
+  id: Dragon
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - TurretHostile
+
+- type: npcFaction
+  id: NanoTrasen
+  hostile:
+  - SimpleHostile
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary
+
+- type: npcFaction
+  id: Mouse
+  hostile:
+  - PetsNT
+  - TurretHostile
+
+- type: npcFaction
+  id: Passive
+
+- type: npcFaction
+  id: PetsNT
+  hostile:
+  - Mouse
+  - SimpleHostile
+  - Zombie
+  - Xeno
+  - TurretHostile
+
+- type: npcFaction
+  id: SimpleHostile
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - TurretHostile
+
+- type: npcFaction
+  id: SimpleNeutral
+  hostile:
+  - TurretHostile
+
+- type: npcFaction
+  id: Syndicate
+  hostile:
+  - NanoTrasen
+  - SimpleHostile
+  - Xeno
+  - PetsNT
+  - Zombie
+  - TurretHostile
+
+- type: npcFaction
+  id: Xeno
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - TurretHostile
+
+- type: npcFaction
+  id: Zombie
+  hostile:
+  - NanoTrasen
+  - SimpleNeutral
+  - SimpleHostile
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Revolutionary
+  - TurretHostile
+
+- type: npcFaction
+  id: Revolutionary
+  hostile:
+  - NanoTrasen
+  - Zombie
+  - SimpleHostile
+  - Dragon
+  - TurretHostile
+
+- type: npcFaction
+  id: TurretHostile
+  hostile:
+  - SimpleHostile
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - Mouse
+  - Dragon
+  - Passive
+  - PetsNT
+  - Zombie
+  - CorruptSilicon
+
+- type: npcFaction
+  id: CorruptSilicon
+  hostile:
+  - SimpleHostile
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - Mouse
+  - Dragon
+  - Passive
+  - PetsNT
+  - Zombie
+  - TurretHostile

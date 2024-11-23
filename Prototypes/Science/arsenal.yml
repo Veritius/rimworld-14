@@ -1,0 +1,91 @@
+- type: technology
+  id: AdvancedArmaments
+  name: advanced armaments
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - RiotHeavyBulletShield
+
+- type: technology
+  id: HeavyAssaultRifles
+  name: high-caliber rifles
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - WeaponRifleVulture
+
+- type: technology
+  id: LightMachineGuns
+  name: light machine guns
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: LightTurretProduction
+  name: light-class turrets
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  discipline: Arsenal
+  tier: 2
+  cost: 8500
+  recipeUnlocks:
+  - SniperTurretBoard
+  - ShotgunTurretBoard
+  - DisablerTurretBoard
+  - LaserTurretBoard
+
+- type: technology
+  id: HeavyTurretProduction
+  name: heavy-class turrets
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  discipline: Arsenal
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+  - GrenadeTurretBoard
+  - MinigunTurretBoard
+  - IncendiaryTurretBoard
+  - HeavyLaserTurretBoard
+
+- type: technology
+  id: PulseEnergyWeapons
+  name: pulse weaponry
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 14000
+  recipeUnlocks:
+  - WeaponPulsePistol
+  - WeaponPulseCarbine
+  - WeaponPulseRifle
+
+- type: technology
+  id: WarCyborgs
+  name: combat cyborgs
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
